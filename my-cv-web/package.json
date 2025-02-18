@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://liushengyu2018.github.io/my-cv-web",
+  "homepage": "https://liushengyu-tech.github.io/my-cv-web",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
