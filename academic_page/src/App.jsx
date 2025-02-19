@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import cvphoto from './assets/cv_photo.jpg'
 import './App.css'
 
 function App() {
@@ -9,25 +7,31 @@ function App() {
 
   
     <div style={{ display: 'flex', flexDirection: 'row'}}>
-      <div style={{ width: '200px',textAlign: 'left'  }}>
+      <div style={{ width: '500px',textAlign: 'center'  }}>
+        
         <div>
         
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
+            <img src={cvphoto} className="logo react" alt="React logo" />
+ 
         </div>
-        <h2>Shengyu Liu</h2>
-        <h2>刘 胜禹</h2>
+        <h2 style={{margin:0}}>Shengyu Liu</h2>
+        <h3 style={{margin:0,color:"grey"}}>刘 胜禹</h3>
 
         <div className="card">
           <p>
             Edit <code>src/App.jsx</code> and save to test HMR
           </p>
         </div>
+
         <p className="read-the-docs">
           Click on the Vite and React logos to learn more
         </p>
+
       </div>
+
+
+
+
 
       <div  style={{ flex: 1 }}>
         <h1>My CV</h1>
