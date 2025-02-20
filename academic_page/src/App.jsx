@@ -1,54 +1,46 @@
 import cvphoto from './assets/cv_photo.jpg'
+import LogoLink from './components/LogoLink'
 import './App.css'
+
+import campus_map from './assets/icons/campus_map.svg'
+import location from './assets/icons/location.svg'
+import email from './assets/icons/email.svg'
+import phone from './assets/icons/phone.svg'  
+import linkin from './assets/icons/linkin.svg'
 
 function App() {
  
   return (
 
-  
-    <div style={{ display: 'flex', flexDirection: 'row'}}>
-      <div style={{ width: '500px',textAlign: 'center'  }}>
-        
-        <div>
-        
-            <img src={cvphoto} className="logo react" alt="React logo" />
- 
+    <div className="container">
+    <div className="leftColumn">
+      <img src={cvphoto} className="logo react" alt="React logo" />
+      <h2 style={{margin:0}}>Shengyu Liu</h2>
+      <h3 style={{margin:0,color:"grey"}}>刘 胜禹</h3>
+      <p>
+        Ph.D. Candidate, University of Twente | Faculty of Engineering Technology<br />
+        Dept. of Design, Production & Management | Manufacturing Systems  
+      </p>
+
+      <div className="logoLinkWrapper">
+        <div className="logoLinkInner">
+          <LogoLink logo={location} text="Enschede, The Netherlands" />
+          <LogoLink logo={email} text="Email" url="mailto:s.liu-4@utwente.nl" />
+          <LogoLink logo={linkin} text="LinkedIn" url="https://www.linkedin.com/in/shengyu-liu-038502195/" />
         </div>
-        <h2 style={{margin:0}}>Shengyu Liu</h2>
-        <h3 style={{margin:0,color:"grey"}}>刘 胜禹</h3>
-
-        <div className="card">
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-
       </div>
-
-
-
-
-
-      <div  style={{ flex: 1 }}>
-        <h1>My CV</h1>
-        <h2>Introduction</h2>
-        
-        <p>
-           Random info: I am a software engineer with 10 years of experience in web development.   
-
-        </p>
-      </div>
-
-
-
-
     </div>
-    
-  )
+
+    <div className="rightColumn">
+      <h1>About me</h1>
+      <h2>Introduction</h2>
+      <p>
+        Random info: I am a software engineer with 10 years of experience in web development.
+      </p>
+    </div>
+  </div>
+)
 }
+
 
 export default App

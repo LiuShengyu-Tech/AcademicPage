@@ -41,3 +41,43 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/* 大屏布局：左右排列 */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftColumn {
+  width: 300px;
+  text-align: center;
+}
+
+.rightColumn {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* LogoLink 相关：为了让内部链接默认靠左 */
+.logoLinkWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* 整体 wrapper 居中 */
+  gap: 8px;
+}
+
+.logoLinkInner {
+  align-self: center;  /* 让 LogoLink 组在 wrapper 内靠左 */
+}
+
+/* 窄屏时调整为上下排列 */
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+  }
+}
