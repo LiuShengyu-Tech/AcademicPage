@@ -1,8 +1,5 @@
 #root {
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
   padding: 2rem;
-  /* text-align: center; */
 }
 
 .logo {
@@ -42,7 +39,6 @@
   color: #888;
 }
 
-
 /* 大屏布局：左右排列 */
 .container {
   display: flex;
@@ -50,13 +46,15 @@
 }
 
 .leftColumn {
-  width: 300px;
+  width: 25%; /* 调整左侧分区的宽度比例 */
   text-align: center;
 }
 
 .rightColumn {
-  flex: 1;
+  width: 75%; /* 调整右侧分区的宽度比例 */
   padding: 0 20px;
+  overflow-y: auto; /* 添加垂直滚动条 */
+  max-height: 100vh; /* 限制最大高度 */
 }
 
 /* LogoLink 相关：为了让内部链接默认靠左 */
@@ -79,5 +77,31 @@
   .leftColumn,
   .rightColumn {
     width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.leftColumn, .rightColumn {
+  width: 100%;
+  max-width: 800px;
+  margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .leftColumn, .rightColumn {
+    width: 50%;
   }
 }

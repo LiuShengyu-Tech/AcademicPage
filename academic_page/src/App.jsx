@@ -1,5 +1,7 @@
+import React, { useState, useEffect } from 'react';
 import cvphoto from './assets/cv_photo.jpg'
 import LogoLink from './components/LogoLink'
+import ReactMarkdown from 'react-markdown';
 import './App.css'
 
 import campus_map from './assets/icons/campus_map.svg'
@@ -10,6 +12,17 @@ import linkin from './assets/icons/linkin.svg'
 
 function App() {
  
+  const [markdownContent, setMarkdownContent] = useState('');
+
+  useEffect(() => {
+    fetch('markdown/file.md')
+      .then((response) => response.text())
+      .then((text) => setMarkdownContent(text));
+  }, []);
+
+
+
+
   return (
 
     <div className="container">
@@ -32,11 +45,7 @@ function App() {
     </div>
 
     <div className="rightColumn">
-      <h1>About me</h1>
-      <h2>Introduction</h2>
-      <p>
-        Random info: I am a software engineer with 10 years of experience in web development.
-      </p>
+    <ReactMarkdown>{markdownContent}</ReactMarkdown>
     </div>
   </div>
 )
