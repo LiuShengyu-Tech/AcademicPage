@@ -1,7 +1,9 @@
+/* 设置根元素的内边距 */
 #root {
-  padding: 2rem;
+  padding: 0;
 }
 
+/* 设置 logo 的样式 */
 .logo {
   height: 10em;
   padding: 1.5em;
@@ -9,13 +11,18 @@
   transition: filter 300ms;
   border-radius: 50%;
 }
+
+/* 设置 logo 悬停时的滤镜效果 */
 .logo:hover {
   filter: drop-shadow(0 0 2em #76ff64aa);
 }
+
+/* 设置 React logo 悬停时的滤镜效果 */
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #a0a0a0aa);
 }
 
+/* 定义 logo 旋转动画 */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -25,16 +32,19 @@
   }
 }
 
+/* 设置在用户偏好减少动画时的动画效果 */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* 设置卡片的内边距 */
 .card {
   padding: 2em;
 }
 
+/* 设置文档链接的颜色 */
 .read-the-docs {
   color: #888;
 }
@@ -45,19 +55,21 @@
   flex-direction: row;
 }
 
+/* 设置左侧分区的宽度和文本对齐方式 */
 .leftColumn {
   width: 25%; /* 调整左侧分区的宽度比例 */
   text-align: center;
 }
 
+/* 设置右侧分区的宽度、内边距和滚动条 */
 .rightColumn {
   width: 75%; /* 调整右侧分区的宽度比例 */
   padding: 0 20px;
   overflow-y: auto; /* 添加垂直滚动条 */
-  max-height: 100vh; /* 限制最大高度 */
+  max-height: 80vh; /* 限制最大高度 */
 }
 
-/* LogoLink 相关：为了让内部链接默认靠左 */
+/* 设置 LogoLink 相关样式：为了让内部链接默认靠左 */
 .logoLinkWrapper {
   display: flex;
   flex-direction: column;
@@ -65,21 +77,25 @@
   gap: 8px;
 }
 
+/* 设置 LogoLink 组在 wrapper 内靠左 */
 .logoLinkInner {
   align-self: center;  /* 让 LogoLink 组在 wrapper 内靠左 */
 }
 
 /* 窄屏时调整为上下排列 */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
   .leftColumn,
   .rightColumn {
     width: 100%;
+    max-height: none; /* 取消高度限制 */
+    overflow-y: visible; /* 取消垂直滚动条 */
   }
 }
 
+/* 设置容器的样式 */
 .container {
   display: flex;
   flex-direction: column;
@@ -90,12 +106,14 @@
   box-sizing: border-box;
 }
 
-.leftColumn, .rightColumn {
+/* 设置左侧和右侧分区的宽度和最大宽度 */
+/* .leftColumn, .rightColumn {
   width: 100%;
   max-width: 800px;
   margin: 10px;
-}
+} */
 
+/* 设置大屏幕时的布局 */
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
