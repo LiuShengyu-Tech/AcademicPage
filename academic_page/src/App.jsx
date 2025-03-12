@@ -9,6 +9,7 @@ import location from './assets/icons/location.svg'
 import email from './assets/icons/email.svg'
 import phone from './assets/icons/phone.svg'  
 import linkin from './assets/icons/linkin.svg'
+import portfolio from './assets/icons/portfolio.svg'
 
 function App() {
  
@@ -40,6 +41,7 @@ function App() {
           <LogoLink logo={location} text="Enschede, The Netherlands" />
           <LogoLink logo={email} text="Email" url="mailto:s.liu-4@utwente.nl" />
           <LogoLink logo={linkin} text="LinkedIn" url="https://www.linkedin.com/in/shengyu-liu-038502195/" />
+          <LogoLink logo={portfolio} text="Portfolio" url="https://issuu.com/shengyuliu/docs/liushengyu_portfolio_2022_33mb_" />
         </div>
       </div>
     </div>
