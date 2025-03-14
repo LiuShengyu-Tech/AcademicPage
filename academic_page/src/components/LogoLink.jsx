@@ -1,4 +1,5 @@
 import React from "react";
+import ShinyText from '../blocks/ShinyText';
 
 const LogoLink = ({ logo, text, url, alt = "logo" }) => {
   const styles = {
@@ -10,7 +11,6 @@ const LogoLink = ({ logo, text, url, alt = "logo" }) => {
       fontSize: "16px",
       fontWeight: "500",
       transition: "color 0.3s",
-      alignSelf: "center",
     },
     logo: {
       width: "24px",
@@ -24,7 +24,7 @@ const LogoLink = ({ logo, text, url, alt = "logo" }) => {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" style={styles.container}>
       <img src={logo} alt={alt} style={styles.logo} />
-      <span style={styles.text}>{text}</span>
+      <ShinyText text={text} disabled={true} speed={3} className='custom-class' />
     </a>
   );
 };
