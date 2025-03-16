@@ -1,5 +1,6 @@
 import React from "react";
 import ShinyText from '../blocks/ShinyText';
+import GradientText from "../blocks/GradientText";
 
 const LogoLink = ({ logo, text, url, alt = "logo" }) => {
   const styles = {
@@ -24,7 +25,7 @@ const LogoLink = ({ logo, text, url, alt = "logo" }) => {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" style={styles.container}>
       <img src={logo} alt={alt} style={styles.logo} />
-      <ShinyText text={text} disabled={true} speed={3} className='custom-class' />
+      <GradientText  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}  animationSpeed={4}  showBorder={false}>{text}</GradientText>
     </a>
   );
 };
