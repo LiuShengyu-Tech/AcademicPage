@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import cvphoto from './assets/cv_photo.jpg'
+import cvphoto from './assets/cv_photo.png'
 import LogoLink from './components/LogoLink'
 import ReactMarkdown from 'react-markdown';
 import './App.css'
